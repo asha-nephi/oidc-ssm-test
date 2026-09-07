@@ -32,7 +32,7 @@ jobs:
           # Replace <ACCOUNT_ID> with your AWS account ID.
           # This role's trust policy (iam/trust-policy-test.json) only
           # accepts tokens where sub == this exact repo + "ref:refs/heads/test".
-          role-to-assume: arn:aws:iam::${{ vars.AWS_ACCOUNT_ID }}:role/github-deploy-test
+          role-to-assume: arn:aws:iam::${{ vars.AWS_ACCOUNT_ID }}:role/ssm-deploy-test
           aws-region: us-east-1
 
       - name: Deploy via SSM Run Command
